@@ -11,12 +11,12 @@ function App() {
   return (
     <div className="App">
       <h1>Welcome to Kodflix</h1>
-      <div>
+      <div className='container'>
         <div className='item'>Breaking Bad</div>
         <div className='item'>Casa de Papel</div>
         <div className='item'>Harry Potter</div>
       </div>
-      <div>
+      <div className='container'>
       <div className='item'>Insidious</div>
       <div className='item'>The Flash</div>
       <div className='item'>X-men</div>
