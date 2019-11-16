@@ -12,14 +12,26 @@ function App() {
     <div className="App">
       <h1>Welcome to Kodflix</h1>
       <div className='container'>
-        <div className='item'>Breaking Bad</div>
-        <div className='item'>Casa de Papel</div>
-        <div className='item'>Harry Potter</div>
+        <div className='item'>
+          <img src={BreakingB} alt='breakingbad' />
+        </div>
+        <div className='item'>
+          <img src={CasaDePapel} alt='casadepapel' />
+        </div>
+        <div className='item'>
+          <img src={HarryPotter} alt='harrypotter' />
+        </div>
       </div>
       <div className='container'>
-      <div className='item'>Insidious</div>
-      <div className='item'>The Flash</div>
-      <div className='item'>X-men</div>
+        <div className='item'>
+          <img src={Insidious} alt='insidious' />
+        </div>
+        <div className='item'>
+          <img src={Flash} alt='flash' />
+        </div>
+        <div className='item'>
+          <img src={Xmen} alt='xmen' />
+        </div>
       </div>
     </div>
   );
