@@ -10,7 +10,7 @@ function App() {
       <div className="App">
         <h1>Welcome to Kodflix</h1>
         <Route exact path='/' component={Gallery} />
-        <Route exact path='/details' component={Details} />
+        <Route exact path='/:details' component={Details} />
       </div>
     </Router>
   );
