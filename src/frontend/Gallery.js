@@ -5,7 +5,8 @@ import getMovies from './getMovies';
 export default function Gallery() {
     return (
         <>
-            <div className='container'>
+            <h1>Welcome to Kodflix</h1>
+            <div className='container'>      
                 {
                     getMovies().map(movies => (
                         <Movies

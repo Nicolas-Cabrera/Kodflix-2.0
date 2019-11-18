@@ -8,7 +8,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Welcome to Kodflix</h1>
         <Route exact path='/' component={Gallery} />
         <Route exact path='/:details' component={Details} />
       </div>
