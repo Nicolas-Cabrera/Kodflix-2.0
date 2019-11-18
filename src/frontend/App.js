@@ -1,28 +1,19 @@
 import React from 'react';
 import '../frontend/App.css';
-import Movies from '../frontend/Movies'
-import BreakingB from './Images/breakingbad.jpg';
-import CasaDePapel from './Images/casadepapel.jpg';
-import HarryPotter from './Images/harrypotter.jpg';
-import Insidious from './Images/insidious.jpg';
-import Flash from './Images/theflash.jpg';
-import Xmen from './Images/xmen.jpg';
+import Details from '../frontend/Details/Details';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Gallery from './Gallery';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to Kodflix</h1>
-      <div className='container'>
-        <Movies name='Breaking Bad' image={BreakingB} />
-        <Movies name='Casa De Papel' image={CasaDePapel} />
-        <Movies name='Harry Potter' image={HarryPotter} />
+    <Router>
+      <div className="App">
+        <h1>Welcome to Kodflix</h1>
+        <Gallery />
+        {/* <Route exact path='/' component={} /> */}
+        <Route exact path='/details' component={Details} />
       </div>
-      <div className='container'>
-        <Movies name='Insidious' image={Insidious} />
-        <Movies name='The Flash' image={Flash} />
-        <Movies name='X-Men' image={Xmen} />
-      </div>
-    </div>
+    </Router>
   );
 }
 

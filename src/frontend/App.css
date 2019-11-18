@@ -4,9 +4,11 @@
 .container {
   display: flex;
 }
+img{
+  width: 100%;
+}
 .item {
   flex: 1;
-  padding: 30px;
   border: 1px solid black;
   position: relative;
   overflow: hidden;
