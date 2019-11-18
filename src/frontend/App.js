@@ -9,8 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <h1>Welcome to Kodflix</h1>
-        <Gallery />
-        {/* <Route exact path='/' component={} /> */}
+        <Route exact path='/' component={Gallery} />
         <Route exact path='/details' component={Details} />
       </div>
     </Router>
