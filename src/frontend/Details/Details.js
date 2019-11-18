@@ -11,7 +11,7 @@ export default function Details() {
 
     return (
         <div>
-            <h1>Welcome to details page</h1>
+            <h1>Welcome Josue to details page</h1>
             <h2>{message}</h2>
         </div>
     );
