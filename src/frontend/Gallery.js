@@ -14,8 +14,6 @@ export default function Gallery() {
                 <Movies id='breaking-bad' name='Breaking Bad' image={BreakingB} />
                 <Movies id='casa-de-papel' name='Casa De Papel' image={CasaDePapel} />
                 <Movies id='harry-potter' name='Harry Potter' image={HarryPotter} />
-            </div>
-            <div className='container'>
                 <Movies id='insidious' name='Insidious' image={Insidious} />
                 <Movies id='the-flash' name='The Flash' image={Flash} />
                 <Movies id='x-men' name='X-Men' image={Xmen} />
