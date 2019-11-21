@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link, Redirect } from 'react-router-dom';
 import getMovies from '../getMovies';
 
 export default function Details(props) {
@@ -13,11 +13,16 @@ export default function Details(props) {
         });
         setMovie(movie);
     }, [movieId]);
-    
-    return (
-        <div>
-            <h1>Welcome to details page</h1>
-            <h1>{movie.name}</h1>
-        </div>
-    );
+
+    if(movie !== undefined) {
+        return (
+            <div>
+                <h1>Welcome to details page</h1>
+                <h1>{movie.name}</h1>
+                <Link to ='/'>Go back to home page</Link>
+            </div>
+        );
+    } else {
+        return <Redirect to='/NotFound' />
+    }
 }
