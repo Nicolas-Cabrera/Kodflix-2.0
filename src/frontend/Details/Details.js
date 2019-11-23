@@ -1,6 +1,7 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, Redirect } from 'react-router-dom';
 import getMovies from '../getMovies';
+import '../Details/Details.css'
 
 export default function Details(props) {
 
@@ -9,17 +10,23 @@ export default function Details(props) {
 
     useEffect(() => {
         let movie = getMovies().find((movie) => {
-        return movie.id === movieId;
+            return movie.id === movieId;
         });
         setMovie(movie);
     }, [movieId]);
 
-    if(movie !== undefined) {
+    if (movie !== undefined) {
         return (
-            <div>
+            <div className='details'>
                 <h1>Welcome to details page</h1>
-                <h1>{movie.name}</h1>
-                <Link to ='/'>Go back to home page</Link>
+                <div className='content'>
+                    <div>
+                        <h1>{movie.name}</h1>
+                        <div className='objects'>{movie.detail}</div>
+                    </div>
+                    <img className='movie' src={movie.logo} alt={movie.name}></img>
+                </div>
+                <Link to='/' className='links'>Go back to home page</Link>
             </div>
         );
     } else {
