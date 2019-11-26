@@ -3,7 +3,7 @@ const app = express();
 const port = 3001;
 const getMovies = require('./movies');
 
-app.get('/', (req, res) => res.send('Hello backend'));
+app.get('/', (req, res) => res.send('Hello backend welcome back Nicolas'));
 app.listen(port, () => console.log(`Example ${port}`));
 
 //api for movies
