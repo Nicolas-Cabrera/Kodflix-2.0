@@ -10,11 +10,6 @@ app.get('/rest/movies', (req, res) => {
     res.send(getMovies());
 });
 
-app.get('/rest/movies/:id', (req, res) => {
-    // let movie = getMovies();
-    res.send(getMovies(req.params.id));
-});
-
 app.use(express.static(path.join(__dirname, '../../build')));
 
 app.get('/', (req, res) => res.send('Hello backend welcome back'));

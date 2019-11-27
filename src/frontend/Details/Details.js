@@ -6,7 +6,7 @@ import '../Details/Details.css'
 export default function Details(props) {
 
     const { movieId } = useParams();
-    let [movie, setMovie] = useState('');
+    const [movie, setMovie] = useState('');
 
     useEffect(() => {
         let movie = getMovies().find((movie) => {
