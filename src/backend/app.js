@@ -17,7 +17,7 @@ app.get('/rest/movies/:id', (req, res) => {
 
 app.use(express.static(path.join(__dirname, '../../build')));
 
-app.get('/', (req, res) => res.send('Hello backend welcome back Nicolas'));
+app.get('/', (req, res) => res.send('Hello backend welcome back'));
 app.listen(port, () => console.log(`Example ${port}`));
 
 app.get('*', function (req, res) {
