@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../frontend/App.css';
-import Details from '../frontend/Details/Details';
+import './App.css';
+import Details from './Details/Details';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Gallery from './Gallery';
 import notFound from './NotFound';
