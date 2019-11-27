@@ -26,7 +26,7 @@ export default function Details(props) {
                     </div>
                     <img className='movie' src={movie.logo} alt={movie.name}></img>
                 </div>
-                <Link to='/' className='links'>Go back to home page</Link>
+                <Link to='/' className='links'>Go back to home page!</Link>
             </div>
         );
     } else {
