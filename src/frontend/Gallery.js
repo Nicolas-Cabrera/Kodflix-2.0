@@ -17,7 +17,7 @@ export default function Gallery() {
             <h1>Welcome to Kodflix</h1>
             <div className='container'>      
                 {
-                    movies ? 
+                    movies? 
                     movies.map(movies => (
                         <Movies
                             key={movies.id}

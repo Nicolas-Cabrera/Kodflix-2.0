@@ -1,16 +1,8 @@
-{/* <img src={require('./Images/breakingbad.jpg')} alt='breaking bad' />
-<img src={require('./Images/casadepapel.jpg')} alt='breaking bad' />
-<img src={require('./Images/harrypotter.jpg')} alt='breaking bad' />
-<img src={require('./Images/insidious.jpg')} alt='breaking bad' />
-<img src={require('./Images/.jpg')} alt='breaking bad' />
-<img src={require('./Images/theflash.jpg')} alt='breaking bad' />
-<img src={require('./Images/toystory.jpg')} alt='breaking bad' />
-<img src={require('./Images/xmen.jpg')} alt='breaking bad' /> */}
 
 module.exports = function getMovies() {
     return [
         { id: 'breakingbad', rank: 5, name: 'Breaking Bad', detail: 'Walter White, a chemistry teacher, discovers that he has cancer and decides to get into the meth-making business to repay his medical debts. His priorities begin to change when he partners with Jesse.' },
-        { id: 'casadepapel', rank: 1, name: 'Casa de Papel', detail: 'A criminal mastermind who goes by "The Professor" has a plan to pull off the biggest heist in recorded history -- to print billions of euros in the Royal Mint of Spain. To help him carry out the ambitious plan, he recruits eight people with certain abilities and who have nothing to lose. The group of thieves take hostages to aid in their negotiations with the authorities, who strategize to come up with a way to capture The Professor. As more time elapses, the robbers prepare for a showdown with the police.' },
+        { id: 'casadepapel', rank: 1, name: 'Casa de Papel', detail: 'A criminal mastermind who goes by "The Professor" has a plan to pull off the biggest heist in recorded history to print billions of euros in the Royal Mint of Spain. To help him carry out the ambitious plan, he recruits eight people with certain abilities and who have nothing to lose. The group of thieves take hostages to aid in their negotiations with the authorities, who strategize to come up with a way to capture The Professor. As more time elapses, the robbers prepare for a showdown with the police.' },
         { id: 'harrypotter', rank: 2, name: 'Harry Potter', detail: 'Harry Potter is a series of fantasy novels written by British author J. K. Rowling. The novels chronicle the lives of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts School of Witchcraft and Wizardry.' },
         { id: 'insidious', rank: 5, name: 'Insidious', detail: 'Josh and Renai Lambert relocate to a new house for a new start. While their son, Dalton, is exploring the attic he mysteriously falls and slips into a coma, the diagnosis of which yields no results.' },
         { id: 'theflash', rank: 4, name: 'The Flash', detail: 'Barry Allen, a forensic scientist with the Central City police force, is struck by lightning in a freak accident. When he wakes up after nine months, he discovers that he can achieve great speeds.' },

@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, Redirect } from 'react-router-dom';
-import getMovies from '../getMovies';
+import { useParams, Link, Redirect } from 'react-router-dom'; 
+// import getMovies from '../getMovies';
 import '../Details/Details.css'
 
 export default function Details(props) {
 
     const { movieId } = useParams();
-    const [movie, setMovie] = useState('');
+    const [movie, setMovie] = useState([]);
 
     useEffect(() => {
-        let movie = getMovies().find((movie) => {
-            return movie.id === movieId;
-        });
-        setMovie(movie);
+        fetch('/rest/movies')
+            .then(response => response.json())
+            .then(movies => setMovie(movies
+                .find(movie => {
+                    return movie.id === movieId
+                })
+            ))
     }, [movieId]);
 
     if (movie !== undefined) {
@@ -24,9 +27,9 @@ export default function Details(props) {
                         <h1>{movie.name}</h1>
                         <div className='objects'>{movie.detail}</div>
                     </div>
-                    <img className='movie' src={movie.logo} alt={movie.name}></img>
+                    <img className='movie' src={require(`../Images/${movieId}.jpg`)} alt={movie.name} />
                 </div>
-                <Link to='/' className='links'>Go back to home page!</Link>
+                <Link to='/' className='links'>Go back to home page</Link>
             </div>
         );
     } else {
