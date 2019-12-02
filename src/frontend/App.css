@@ -1,13 +1,12 @@
 h1 {
   color: white;
+  width: 100%;
 }
 .App {
   text-align: center;
   background-color: black;
 }
 .container {
-  /* display: flex;
-  flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 }
@@ -36,21 +35,23 @@ img{
 .links {
   color: white;
   font-size: 25px;
-  text-decoration: none;
   margin-bottom: 5px;
-  position: relative;
-  bottom: 25px;
   padding: 5px;
-  border: 2px solid white;
   border-radius: 5px;
+}
+.linkText {
+  text-decoration: none;
+  color: white;
 }
 .links:hover {
   font-size: 26px;
 }
 @media only screen and (max-width: 600px) {
   .links {
-    margin-bottom: 5px;
-    bottom: -20px;
-    font-size: 15px;;
+    font-size: 15px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }

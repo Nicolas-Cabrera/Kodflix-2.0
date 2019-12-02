@@ -14,7 +14,9 @@ export default function Gallery() {
 
     return (
         <>
-            <h1>Welcome to Kodflix</h1>
+            <div>
+                <h1>Welcome to Kodflix</h1>
+            </div>
             <div className='container'>      
                 {
                     movies? 
