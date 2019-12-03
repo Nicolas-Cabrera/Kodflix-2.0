@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link, Redirect } from 'react-router-dom'; 
 import '../Details/Details.css'
+import Loading from '../LoadingIcon/LoadingIcon';
 
 export default function Details(props) {
 
@@ -18,7 +19,9 @@ export default function Details(props) {
     }, [movieId]);
 
     if (Array.isArray(movie) && movie.length === 0) {
-        return <div></div>
+        return <div>
+            <Loading />
+        </div>
     }    
     else if(movie !== undefined) {
         return (
