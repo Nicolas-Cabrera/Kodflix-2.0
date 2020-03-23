@@ -22,7 +22,7 @@ db.connect().then(dbo => {
 
 	app.use(express.static(path.join(__dirname, '../../build')));
 
-	app.get('/', (req, res) => res.send('Hello backend welcome back sir'));
+	app.get('/', (req, res) => res.send('Hello backend welcome back sir!'));
 	app.listen(port, () => console.log(`Example ${port}`));
 
 	app.get('*', function (req, res) {
