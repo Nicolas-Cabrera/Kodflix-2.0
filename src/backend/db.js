@@ -1,8 +1,13 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
+require('dotenv').config();
 
-//const url = 'mongodb://Nico:Nico1216@localhost:27017/kodflix';
-const url = 'mongodb+srv://Nico:Nico1216@cluster0-hr8ag.mongodb.net/test?retryWrites=true&w=majority';
+const url = process.env.NODE_ENV === 'production' ? 
+	process.env.DB_URL_PRD : 
+	process.env.DB_URL_DEV;
+const dbName = process.env.NODE_ENV === 'production' ?
+	'heroku_zb8xzspg' : 
+	'kodflix';
 
 module.exports = { connect };
 
@@ -11,7 +16,7 @@ function connect() {
 		MongoClient.connect(url, function (err, client) {
 			assert.equal(null, err);
 			console.log('Connected successfully to server');
-			const dbo = client.db('kodflix');
+			const dbo = client.db(dbName);
 			resolve(dbo);
 		});
 	})

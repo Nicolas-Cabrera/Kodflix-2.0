@@ -3,7 +3,6 @@ const app = express();
 const path = require('path');
 const port = process.env.PORT || 3001;
 const db = require('./db');
-//const getMovies = require('./movies');
 
 db.connect().then(dbo => {
 	app.get('/rest/movies', (req, res) => {
@@ -12,13 +11,6 @@ db.connect().then(dbo => {
 			res.send(results);
 		})
 	})
-
-
-// //api for movies
-// app.get('/rest/movies', (req, res) => {
-//     //let movies = getMovies();
-//     res.send(getMovies());
-// });
 
 	app.use(express.static(path.join(__dirname, '../../build')));
 
