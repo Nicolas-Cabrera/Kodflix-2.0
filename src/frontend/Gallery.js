@@ -30,6 +30,7 @@ export default function Gallery() {
             </div>
         </>
     } else {
-        return <Loading />  
+		//return <Loading />  
+		return <h1> Nothing to display</h1>
     }
 }
