@@ -2,13 +2,14 @@ const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 require('dotenv').config();
 
-// const url = process.env.NODE_ENV === 'production' ? 
-// 	process.env.DB_URL_PRD : 
-// 	process.env.DB_URL_DEV;
-const url = process.env.DB_URL_PRD;
-// const dbName = process.env.NODE_ENV === 'production' ?
-// 	'heroku_zb8xzspg' : 
-// 	'kodflix';
+//Database works nwo on deployment Task #30
+
+const url = process.env.NODE_ENV === 'production' ? 
+	process.env.DB_URL_PRD : 
+	process.env.DB_URL_DEV;
+const dbName = process.env.NODE_ENV === 'production' ?
+	'heroku_zb8xzspg' : 
+	'kodflix';
 
 module.exports = { connect };
 
@@ -17,7 +18,7 @@ function connect() {
 		MongoClient.connect(url, function (err, client) {
 			assert.equal(null, err);
 			console.log('Connected successfully to server');
-			const dbo = client.db('heroku_zb8xzspg');
+			const dbo = client.db(dbName);
 			resolve(dbo);
 		});
 	})
