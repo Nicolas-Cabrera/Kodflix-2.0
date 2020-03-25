@@ -3,20 +3,16 @@ import { useParams, Link, Redirect } from 'react-router-dom';
 import '../Details/Details.css'
 import Loading from '../LoadingIcon/LoadingIcon';
 
-export default function Details(props) {
+export default function Details() {
 
     const { movieId } = useParams();
-    const [movie, setMovie] = useState([]);
+    const [ movie, setMovie ] = useState([]);
 
     useEffect(() => {
-        fetch('/rest/movies')
-            .then(response => response.json())
-            .then(movies => setMovie(movies
-                .find(movie => {
-                    return movie.id === movieId
-                })
-            ))
-    }, [movieId]);
+		fetch(`/rest/movies/${movieId}`)
+			.then(response => response.json())
+			.then(movies => setMovie(movies));
+	}, [movieId]);
 
     if (Array.isArray(movie) && movie.length === 0) {
         return <div>

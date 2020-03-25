@@ -10,6 +10,13 @@ db.connect().then(dbo => {
 		dbo.collection('shows').find({}).toArray((err, results) => {
 			if(err) throw err;
 			res.send(results);
+		});
+	});
+
+	app.get('/rest/movies/:id', (req, res) => {
+		dbo.collection('shows').findOne({ id: req.params.id }, (err, results) => {
+			if(err) throw err;
+			res.send(results);
 		})
 	})
 
